@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Contact us in SquareEyes" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Ruda:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/03e488ba00.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>SquareEyes - Contact us</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          src="images/logo.png"
+          alt="SquareEyes logo with glasses"
+          class="logo"
+      /></a>
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+      </label>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="allmovies.html">All movies</a>
+        <a href="aboutus.html">About us</a>
+        <a href="contactus.html" class="current">Contact us</a>
+        <a href="checkout/checkout.html"
+          ><img src="images/icon-cart.png" alt="shopping cart" class="cart"
+        /></a>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="contact-intro">
+        <h1>Contact us</h1>
+      </div>
+      <p class="ref-contactus">
+        Any questions or remarks? Just write us a message - we'd love to hear
+        from you!
+      </p>
+      <section class="contact-us">
+        <div class="contact-us-info">
+          <h2>SquareEyes</h2>
+          <h3>Contact form</h3>
+          <p>SquareEyes@gmail.com</p>
+          <p>+123 456 789</p>
+          <p>Kongens gate 123</p>
+          <iframe
+            class="address-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.199442473071!2d10.7434351!3d59.9122373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e88185e096d%3A0x4cfbd45a44356a14!2sKongens%20gate%20123%2C%200153%20Oslo!5e0!3m2!1sen!2sno!4v1743010572928!5m2!1sen!2sno"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contact-us-details-section">
+          <form>
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              required
+              id="name"
+              name="name"
+              title="Enter your full name"
+              placeholder="Your full name"
+            />
+            <label for="email">Your email</label>
+            <input
+              type="email"
+              required
+              id="email"
+              name="email"
+              title="Enter your email address"
+              placeholder="Your email address"
+            />
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              required
+              name="message"
+              title="Type your message"
+              placeholder="Start typing your message.."
+            ></textarea>
+            <button class="cta contact-us-details-section-button">
+              <i class="fa-solid fa-paper-plane"></i> Send message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="squareeyes">
+        <img src="images/logo-small.png" alt="Squareeyes small logo" />
+        <a href="">&copy; 2025 Copyright</a>
+        <a href="">Terms and conditions</a>
+        <a href="">Privacy</a>
+      </div>
+      <div class="social">
+        <img src="images/facebook.png" alt="Facebook logo" />
+        <img src="images/instgram.png" alt="Instagram logo" />
+        <img src="images/twitter.png" alt="Twitter logo" />
+      </div>
+    </footer>
+  </body>
+</html>
