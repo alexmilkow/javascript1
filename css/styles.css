@@ -212,35 +212,18 @@ footer {
   padding: 0;
 }
 
-/*Category labels on home page*/
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"]:checked + label {
-  color: var(--avatareye-constrast-color);
-}
-
-.content {
-  display: none;
-}
-
-#action:checked ~ .content.action,
-#comedy:checked ~ .content.comedy,
-#horror:checked ~ .content.horror {
-  display: block;
-}
-
-label:hover {
-  cursor: pointer;
-}
-
-label {
+.product-card {
   display: inline-block;
-  font-size: 18px;
-  padding: 40px 20px 10px 0px;
+  padding-right: 100px;
+  width: 250px;
+  margin-top: 30px;
 }
-/*End category labels on home page*/
+
+.product-card img {
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
 /*End home page*/
 
 /*Video page*/
