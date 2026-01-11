@@ -224,6 +224,16 @@ footer {
   object-fit: cover;
   margin-bottom: 50px;
 }
+
+#filter-container {
+  display: block;
+  margin: 30px 0;
+  width: 40vh;
+  height: 50px;
+  text-align: center;
+  background-color: var(--avatareye-constrast-color);
+  border-radius: 10px;
+}
 /*End home page*/
 
 /*Video page*/
