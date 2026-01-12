@@ -23,7 +23,7 @@
       sizes="32x32"
       href="../images/favicon.png"
     />
-    <script src="js/script.js" defer></script>
+    <script src="/js/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -47,29 +47,13 @@
       </nav>
     </header>
     <main class="main">
-      <div class="heading-container">
-        <h1>The Batman</h1>
-      </div>
-      <div class="movie-cover-checkout">
-        <img src="../images/cover-seven.webp" alt="batman movie cover" />
-        <div class="container-content">
-          <div class="movie-cover-checkout-textcontent">
-            <p>
-              In The Batman, Bruce Wayne battles the Riddler’s chaos and
-              uncovers Gotham’s dark secrets, forcing him to confront his past
-              and define his legacy as a hero.
-            </p>
-            <p>2022</p>
-            <p>2h 56m</p>
-            <p>$10</p>
-          </div>
-          <div class="movie-cover-checkout-buttons">
-            <input type="checkbox" id="add-to-cart-checkbox" hidden />
-            <label for="add-to-cart-checkbox" class="cta add-to-cart"></label>
-            <a href="../checkout/checkout.html" class="cta">Cart</a>
-          </div>
-        </div>
-      </div>
+      <h1 id="product-title"></h1>
+      <img id="product-img" />
+      <p id="product-descr"></p>
+      <p id="product-rating"></p>
+      <p id="product-genre"></p>
+      <p id="product-released"></p>
+      <p id="product-price"></p>
     </main>
     <footer>
       <div class="squareeyes">
