@@ -55,15 +55,7 @@
         <div class="checkout-cart">
           <h2>SquareEyes</h2>
           <h3>Checkout</h3>
-          <div class="cart-info">
-            <img src="../images/cover-seven.webp" alt="Batman movie cover" />
-            <div class="cart-info-right">
-              <h4>The Batman</h4>
-              <p>2022</p>
-              <p>2h 56m</p>
-              <p>$10<i class="fa-solid fa-trash"></i></p>
-            </div>
-          </div>
+          <div id="checkout-cart-items"></div>
           <hr />
           <div class="discount">
             <p>Discount</p>
@@ -73,9 +65,8 @@
             <p>Order summary</p>
             <hr />
             <div class="price">
-              <p>Order <span>$10</span></p>
-              <p>Tax <span>$0</span></p>
-              <p class="bold">Total<span>$10</span></p>
+              <p>Order <span id="order-price">$0</span></p>
+              <p class="bold">Total<span id="total-price">$0</span></p>
             </div>
           </div>
         </div>

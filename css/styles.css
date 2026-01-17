@@ -318,6 +318,36 @@ footer {
   content: "Added to cart";
   width: 120px;
 }
+
+.cart-info-right {
+  width: 100%;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.quantity-buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete {
+  cursor: pointer;
+}
 /*End video page*/
 
 /*About us-page*/
