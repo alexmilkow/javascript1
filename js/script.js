@@ -110,10 +110,80 @@ if(window.location.pathname.includes('product.html')) {
             const productPrice = document.getElementById('product-price');
             productPrice.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.data.price);
 
+            const addToBasketButton = document.getElementById('add-to-basket');
+            addToBasketButton.textContent = 'Add to basket';
+
+            const removeFromBasketButton = document.getElementById('remove-from-basket');
+            removeFromBasketButton.textContent = 'Remove from basket';
+
+
+            addToBasketButton.addEventListener('click', () => {
+                const { productCart, product } = getCartAndProduct(data.data.id);
+
+                if(product) {
+                    product.quantity += 1;
+                } else {
+                    productCart.push({
+                        id: data.data.id,
+                        title: data.data.title,
+                        price: data.data.price,
+                        quantity: 1
+                    });
+                };
+
+                localStorage.setItem("basket", JSON.stringify(productCart));
+                updateBasketCount();
+            });
+
+            removeFromBasketButton.addEventListener('click', () => {
+                const { productCart, product } = getCartAndProduct(data.data.id);
+
+                if(!product) return;
+                product.quantity -= 1;
+
+                if(product.quantity === 0) {
+                    const updatedCart = productCart.filter(product => product.id !== data.data.id);
+                    localStorage.setItem("basket", JSON.stringify(updatedCart));
+                } else {
+                localStorage.setItem("basket", JSON.stringify(productCart));
+                }
+
+                updateBasketCount();
+            });
+
+                updateBasketCount();
+
         } catch(error) {
             console.error('Error fetching product: ', error)
 
         };
+
     };
     loadProduct();
 };
+
+//Helper function to prevent duplication of code, used in add to basket and remove from basket
+function getCartAndProduct(productId) {
+    let productCart = JSON.parse(localStorage.getItem("basket")) || [];
+    let product = productCart.find(product => product.id === productId);
+
+    return { productCart, product };
+};
+
+//Updates the count on the basket icon
+function updateBasketCount() {
+    const basketCountElement = document.getElementById('basket-count');
+
+    let productCart = JSON.parse(localStorage.getItem("basket")) || [];
+    let totalQuantity = productCart.reduce((sum, product) => sum + product.quantity, 0);
+
+    if(!basketCountElement) return;
+
+    if(totalQuantity === 0 ) {
+        basketCountElement.style.display = "none";
+    } else {
+        basketCountElement.style.display = "inline-block";
+        basketCountElement.textContent = totalQuantity;
+    }
+};
+updateBasketCount();
