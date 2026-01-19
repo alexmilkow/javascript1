@@ -249,8 +249,21 @@ function renderCheckoutCart() {
     if(totalPrice) totalPrice.textContent = `$${total.toFixed(2)}`;
 
 };
-
 renderCheckoutCart();
+
+const payButton = document.querySelector('.checkout-payment-button');
+if(payButton) {
+    payButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const productCart = JSON.parse(localStorage.getItem("basket")) || [];
+
+        localStorage.setItem("basket", JSON.stringify([]));
+        updateBasketCount();
+
+        window.location.href = `checkout-success.html`;
+    });
+};
 
 
 function updateQuantity(productId, change) {
