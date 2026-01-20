@@ -65,6 +65,7 @@ function renderMovies(moviesArray, container) {
 
     const productTitle = document.createElement('h2');
     productTitle.textContent = product.title;
+    productTitle.classList.add('product-title');
 
     const productImage = document.createElement('img');
     productImage.src = product.image.url;

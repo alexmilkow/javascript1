@@ -241,6 +241,10 @@ footer {
   margin-bottom: 50px;
 }
 
+.product-title {
+  color: white;
+}
+
 #filter-container {
   display: block;
   margin: 30px 0;
