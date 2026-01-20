@@ -1,7 +1,7 @@
 const BASE_URL = 'https://v2.api.noroff.dev/';
 const PRODUCTS_URL = 'square-eyes';
 const FULL_PRODUCTS_URL = BASE_URL + PRODUCTS_URL;
-const SINGLE_PRODUCT_URL = '/products/product.html?id=';
+const SINGLE_PRODUCT_URL = 'products/product.html?id=';
 
 // Fetching all movie titles and movie covers, and filtering on genre
 async function fetchMovieData() {
