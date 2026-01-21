@@ -118,7 +118,7 @@ if(window.location.pathname.includes('product.html')) {
             const removeFromBasketButton = document.getElementById('remove-from-basket');
             removeFromBasketButton.textContent = 'Remove from basket';
 
-
+            //Add to basket functionality
             addToBasketButton.addEventListener('click', () => {
                 const { productCart, product } = getCartAndProduct(data.data.id);
 
@@ -137,6 +137,7 @@ if(window.location.pathname.includes('product.html')) {
                 updateBasketCount();
             });
 
+            //Remove from basket functionality
             removeFromBasketButton.addEventListener('click', () => {
                 const { productCart, product } = getCartAndProduct(data.data.id);
 
@@ -164,7 +165,7 @@ if(window.location.pathname.includes('product.html')) {
     loadProduct();
 };
 
-//Helper function to prevent duplication of code, used in add to basket and remove from basket
+//Helper function to get product from cart by ID
 function getCartAndProduct(productId) {
     let productCart = JSON.parse(localStorage.getItem("basket")) || [];
     let product = productCart.find(product => product.id === productId);
@@ -190,7 +191,7 @@ function updateBasketCount() {
 };
 updateBasketCount();
 
-
+//Render shopping cart on checkout page
 function renderCheckoutCart() {
     const cartContainer = document.getElementById('checkout-cart-items');
     if(!cartContainer) return;
@@ -253,6 +254,7 @@ function renderCheckoutCart() {
 };
 renderCheckoutCart();
 
+//Handle payment process on checkout page
 const payButton = document.querySelector('.checkout-payment-button');
 if(payButton) {
     payButton.addEventListener('click', (event) => {
@@ -267,7 +269,7 @@ if(payButton) {
     });
 };
 
-
+//Update the quantity of a product in the cart
 function updateQuantity(productId, change) {
     let productCart = JSON.parse(localStorage.getItem("basket")) || [];
     const product = productCart.find(product => product.id === productId);
@@ -285,6 +287,7 @@ function updateQuantity(productId, change) {
     updateBasketCount();
 };
 
+//Remove a product from the cart
 function removeFromCart(productId) {
     let productCart = JSON.parse(localStorage.getItem("basket")) || [];
     productCart = productCart.filter(p => p.id !== productId);
