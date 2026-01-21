@@ -263,7 +263,7 @@ if(payButton) {
         localStorage.setItem("basket", JSON.stringify([]));
         updateBasketCount();
 
-        window.location.href = `${BASE_PATH}checkout-success.html`;
+        window.location.href = `${BASE_PATH}checkout/checkout-success.html`;
     });
 };
 
