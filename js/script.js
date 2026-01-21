@@ -1,7 +1,8 @@
+const BASE_PATH = '/javascript1/';
 const BASE_URL = 'https://v2.api.noroff.dev/';
 const PRODUCTS_URL = 'square-eyes';
 const FULL_PRODUCTS_URL = BASE_URL + PRODUCTS_URL;
-const SINGLE_PRODUCT_URL = 'products/product.html?id=';
+const SINGLE_PRODUCT_URL = `${BASE_PATH}products/product.html?id=`;
 
 // Fetching all movie titles and movie covers, and filtering on genre
 async function fetchMovieData() {
@@ -262,7 +263,7 @@ if(payButton) {
         localStorage.setItem("basket", JSON.stringify([]));
         updateBasketCount();
 
-        window.location.href = `checkout-success.html`;
+        window.location.href = `${BASE_PATH}checkout-success.html`;
     });
 };
 
